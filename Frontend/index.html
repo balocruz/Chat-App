@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="auth-section" id="authSection">
+            <div class="login">
+                <form id="loginForm">
+                    <h2>Login</h2>
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+
+        <main class="chat-area" id="chatArea">
+    <section class="chat-app">
+        
+        
+
+        <!-- Chat Header -->
+        <header class="chat-header">
+
+            <button class="back-button" aria-label="Go back">
+                &#8592;
+            </button>
+
+            <div class="profile">
+                <div class="avatar">C</div>
+
+                <div class="profile-info">
+                    <h2 class="receiver" id="receiverTitle">Cynthia</h2>
+
+                    <span class="online-indicator">
+                        Online
+                    </span>
+                </div>
+            </div>
+
+            <button class="header-button" aria-label="More options">
+                &#8942;
+            </button>
+
+        </header>
+
+
+        <!-- Messages -->
+        <section id="messageContainer" class="message-container">
+
+        </section>
+
+
+        <!-- Message Input -->
+        <footer class="message-area">
+
+            <div class="input-wrapper">
+
+                <button class="attachment-button" aria-label="Attach">
+                    +
+                </button>
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="sendButton"
+                    class="send-button"
+                    aria-label="Send message"
+                >
+                    &#10148;
+                </button>
+
+            </div>
+
+        </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script type="module" src="index.js"></script>
+
+</body>
+</html>
+
